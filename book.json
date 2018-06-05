@@ -1,0 +1,29 @@
+{
+  "gitbook": ">=3.2.0",
+  "description": "Envoy学习笔记",
+  "language": "zh-hans",
+  "author": "敖小剑",
+  "extension": null,
+  "generator": "site",
+  "links" : {
+    "sidebar" : {
+        "敖小剑的博客": "https://skyao.io"
+    }
+  },
+  "structure" : {
+    },
+  "plugins": [
+    "-search",
+    "-sharing",
+    "edit-link"
+  ],
+  "pluginsConfig": {
+    "edit-link": {
+        "base": "https://github.com/skyao/learning-envoy/edit/master",
+        "label": "Edit"
+    }
+  },
+  "title": "Envoy学习笔记",
+  "variables": {
+  }
+}
