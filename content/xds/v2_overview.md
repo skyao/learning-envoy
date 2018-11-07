@@ -1,6 +1,14 @@
-# Envoy v2 API概述
+---
+date: 2018-11-07T15:30:00+08:00
+title: 用于开发者的Envoy v2 API
+menu:
+  main:
+    parent: "xds"
+weight: 302
+description : "用于开发者的Envoy v2 API"
+---
 
-> 翻译自：https://github.com/envoyproxy/data-plane-api/blob/master/API_OVERVIEW.md
+> 备注：内容来自：https://github.com/envoyproxy/data-plane-api/blob/master/API_OVERVIEW.md
 
 ## 目标
 
@@ -41,7 +49,7 @@ Envoy API的第2版是现有的API的演进，并引入了新的API，以便：
 
 - [Cluster Discovery Service (CDS)](https://github.com/envoyproxy/data-plane-api/blob/master/envoy/api/v2/cds.proto).
 - [Endpoint Discovery Service (EDS)](https://github.com/envoyproxy/data-plane-api/blob/master/envoy/api/v2/eds.proto). 这与v1 API中的SDS具有相同的作用，新名称更好地描述了API在实践中的作用。能够利用N维上游指标的高级全局负载均衡现在可以支持了。
-- [Health Discovery Service (HDS)](https://github.com/envoyproxy/data-plane-api/blob/master/envoy/service/discovery/v2/hds.proto). This new API supports efficient endpoint health discovery by the management server via the Envoy instances it manages. Individual Envoy instances will typically receive HDS instructions to health check a subset of all endpoints. The health check subset may not be a subset of the Envoy instance's EDS endpoints. 此新API支持管理服务器通过其管理的Envoy实例进行高效的端点健康发现。单独的Envoy实例通常会接收HDS指令以对所有端点的子集进行健康检查。运行健康检查子集可能不是Envoy实例的EDS端点的子集。
+- [Health Discovery Service (HDS)](https://github.com/envoyproxy/data-plane-api/blob/master/envoy/service/discovery/v2/hds.proto). 此新API支持管理服务器通过其管理的Envoy实例进行高效的端点健康发现。单独的Envoy实例通常会接收HDS指令以对所有端点的子集进行健康检查。运行健康检查子集可能不是Envoy实例的EDS端点的子集。
 - [Listener Discovery Service (LDS)](https://github.com/envoyproxy/data-plane-api/blob/master/envoy/api/v2/lds.proto). 这个新API支持动态发现监听器配置（绑定哪些端口，TLS细节，过滤器链等）。
 - [Metric Service (MS)](https://github.com/envoyproxy/data-plane-api/blob/master/envoy/service/metrics/v2/metrics_service.proto). 这个新的API允许Envoy一直推送（流）指标，以供服务器使用。
 - [Rate Limit Service (RLS)](https://github.com/envoyproxy/data-plane-api/blob/master/envoy/service/ratelimit/v2/rls.proto)
@@ -66,7 +74,7 @@ xDS API的protocol描述在 [这里](https://github.com/envoyproxy/data-plane-ap
 - 管理服务器：实现v2 Envoy API的逻辑服务器。这不一定是单个物理机器，因为它可以被复制/分片，并且用于不同xDS API的API服务可以在不同的物理机器上实现。
 - 区域/region：区域所在的地理区域。
 - 子区域/Sub-zone：Envoy实例或端点运行的区域内的位置。这允许区域内的多个负载均衡目标。
-- 区域/Zone: AWS中的Availability Zone (AZ), GCP中的Zone
 - 上游/Upstream: 上游主机接收来自 Envoy 的连接和请求，并返回响应。
 - xDS: CDS/EDS/HDS/LDS/RLS/RDS/SDS APIs.
+- 区域/Zone: AWS中的Availability Zone (AZ), GCP中的Zone
 

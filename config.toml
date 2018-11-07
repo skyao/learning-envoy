@@ -1,0 +1,121 @@
+baseurl = "http://localhost:1313/"
+languageCode = "zh-cn"
+uglyurls = true
+relativeURLs = false
+title = "Envoy学习笔记"
+theme = "hugo-material-docs"
+metadataformat = "yaml"
+canonifyurls = true
+preserveTaxonomyNames = true
+disablePathToLower = true
+
+# Enable Google Analytics by entering your tracking id
+googleAnalytics = "c7442f5794ea2abb71c6ff05dc0b8779"
+
+[params]
+# General information
+    author = "敖小剑"
+    keywords = "Envoy,学习笔记,敖小剑"
+    description = "Envoy是Lyft公司提供的Service Mesh实现。"
+    copyright = "版权所有，转载请注明出处"
+    
+    # Repository
+    provider = "GitHub"
+    repo_url = "https://github.com/skyao/learning-envoy"
+    
+    version = ""
+    logo = "images/logo.png"
+    favicon = ""
+    
+    permalink = "#"
+    
+    # reward button, comment this to disable it
+    reward = true
+    
+    # Custom assets
+    custom_css = []
+    custom_js  = []
+    
+    # Syntax highlighting theme
+    highlight_css  = ""
+    
+    [params.palette]
+    	primary = "red"
+    	accent  = "teal"
+    
+    [params.font]
+    	text = "Ubuntu"
+    	code = "Ubuntu Mono"
+
+[social]
+	twitter = ""
+	github  = "skyao"
+	email   = "aoxiaojian@gmail.com"
+
+[[menu.main]]
+	name   = "前言"
+	url    = "/"
+	weight = 1
+
+[[menu.main]]
+	name   = "介绍"
+	identifier = "introduction"
+	url    = "/introduction/"
+	weight = 100
+
+[[menu.main]]
+	name   = "架构"
+	identifier = "architecture"
+	url    = "/architecture/"
+	weight = 200
+
+[[menu.main]]
+	name   = "XDS API"
+	identifier = "xds"
+	url    = "/xds/"
+	weight = 300
+
+[[menu.main]]
+	name   = "LDS"
+	identifier = "xds-lds"
+	parent = "xds"
+	url    = "/xds/lds/"
+	weight = 310
+
+[[menu.main]]
+	name   = "RDS"
+	identifier = "rds-ads"
+	parent = "xds"
+	url    = "/xds/rds/"
+	weight = 320
+
+[[menu.main]]
+	name   = "CDS"
+	identifier = "xds-cds"
+	parent = "xds"
+	url    = "/xds/cds/"
+	weight = 330
+
+[[menu.main]]
+	name   = "EDS"
+	identifier = "xds-eds"
+	parent = "xds"
+	url    = "/xds/eds/"
+	weight = 340
+
+[[menu.main]]
+	name   = "ADS"
+	identifier = "xds-ads"
+	parent = "xds"
+	url    = "/xds/ads/"
+	weight = 350
+
+
+
+[blackfriday]
+	smartypants	= true
+	fractions = true
+	smartDashes = true
+	plainIDAnchors = true
+
+

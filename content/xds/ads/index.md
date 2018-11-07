@@ -1,6 +1,8 @@
-# ADS API
-
-
+---
+date: 2018-11-07T14:50:00+08:00
+title: ADS API
+description : "介绍Envoy的XDS API中的ADS"
+---
 
  See https://github.com/lyft/envoy-api#apis for a description of the role of
  ADS and how it is intended to be used by a management server. ADS requests
