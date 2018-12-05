@@ -91,10 +91,10 @@ googleAnalytics = "c7442f5794ea2abb71c6ff05dc0b8779"
 	weight = 230
 
 [[menu.main]]
-	name   = "Router概述"
-	identifier = "architecture-router"
+	name   = "Route概述"
+	identifier = "architecture-route"
 	parent = "architecture"
-	url    = "/architecture/router/"
+	url    = "/architecture/route/"
 	weight = 240
 
 [[menu.main]]

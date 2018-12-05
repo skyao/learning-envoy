@@ -1,6 +1,7 @@
 ---
 date: 2018-11-07T14:50:00+08:00
 title: XDS API
+weight: 300
 description : "介绍Envoy的XDS API"
 ---
 
@@ -8,16 +9,21 @@ description : "介绍Envoy的XDS API"
 
 XDS API是一系列API的统称，这里的`XDS`代表如下API：
 
-| API简称 | API全称                      | API描述        |
-| ------- | ---------------------------- | -------------- |
-| EDS     | Endpoint Discovery Service   |                |
-| CDS     | Cluster Discovery Service    |                |
-| LDS     | Listener Discovery Service   |                |
-| RDS     | Route Discovery Service      |                |
-| ADS     | Aggregated Discovery Service |                |
-| SDS     | Service Discovery Service    | 改名EDS        |
-| HDS     | Health Discovery Service     | 设计中，未实现 |
-| SDS     | Secret Discovery Service     | 设计中，未实现 |
+| Concept | 全称                          | 描述              |
+| ------- | ----------------------------- | ----------------- |
+| LDS     | Listener Discovery Service    |                   |
+| RDS     | Route Discovery Service       |                   |
+| CDS     | Cluster Discovery Service     |                   |
+| EDS     | Endpoint Discovery Service    |                   |
+| ~~SDS~~ | ~~Service Discovery Service~~ | 改名EDS           |
+| ADS     | Aggregated Discovery Service  |                   |
+| HDS     | Health Discovery Service      |                   |
+| SDS     | Secret Discovery Service      |                   |
+| MS      | Metric Service                |                   |
+| RLS     | Rate Limit Service            |                   |
+| xDS     |                               | 以上各种API的统称 |
+
+在Envoy v2 API中，RDS路由指向集群，CDS提供集群配置，通过EDS发现集群成员。
 
 xds api 在envoy中被称为 `Data plane API`，以下是envoy对这些API的说明：
 
