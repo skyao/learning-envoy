@@ -1,11 +1,11 @@
 ---
 date: 2018-11-02T10:00:00+08:00
-title: Listener配置参考
-weight: 221
+title: Listener API
+weight: 311
 menu:
   main:
-    parent: "architecture-listener"
-description : "Envoy的Listener配置参考手册"
+    parent: "xds-lds"
+description : "Envoy的Listener API"
 ---
 
 > 备注：内容来自 https://www.envoyproxy.io/docs/envoy/latest/api-v2/api/v2/lds.proto#envoy-api-msg-listener
@@ -52,7 +52,6 @@ Listerner配置的JSON格式如下所示：
 | freebind                          | BoolValue                      | 监听器是否应设置 IP_FREEBIND 套接字选项。 当此标志设置为true时，可以将监听器绑定到未在运行Envoy的系统上配置的IP地址。 当此标志设置为false时，套接字上的选项 IP_FREEBIND 被禁用。 如果未设置此标志（默认值），则不会修改套接字，即既未启用也未禁用该选项。 |
 | socket_options                    | core.SocketOption              | Envoy源代码或预编译二进制文件中可能不存在的其他套接字选项。  |
 | tcp_fast_open_queue_length        | UInt32Value                    | 监听器是否应接受 TCP Fast Open（TFO）连接。 当此标志设置为大于0的值时，将在套接字上启用选项TCP_FASTOPEN，其队列长度为指定大小（请参阅RFC7413中的详细信息）。 当此标志设置为0时，套接字上禁用选项TCP_FASTOPEN。 如果未设置此标志（默认值），则不会修改套接字，即既未启用也未禁用该选项。 |
-| bugfix_reverse_write_filter_order | BoolValue                      | 如果为true，则写过滤器的顺序将与过滤器链中配置的过滤器的顺序相反。 否则，它将保留现有顺序。 注意：这是Envoy的一个bug fix，它被设计为具有与读取顺序相反的写入过滤器顺序（有关详细信息，请参阅https://github.com/envoyproxy/envoy/issues/4599）。 当我们删除此字段时，Envoy在设置为true时将具有相同的行为。 |
 
 
 

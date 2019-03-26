@@ -77,45 +77,17 @@ googleAnalytics = "c7442f5794ea2abb71c6ff05dc0b8779"
 	weight = 210
 
 [[menu.main]]
-	name   = "Listener概述"
-	identifier = "architecture-listener"
-	parent = "architecture"
-	url    = "/architecture/listener/"
-	weight = 220
-
-[[menu.main]]
-	name   = "Listener Filter概述"
-	identifier = "architecture-filter"
-	parent = "architecture"
-	url    = "/architecture/filter/"
-	weight = 230
-
-[[menu.main]]
-	name   = "Route概述"
-	identifier = "architecture-route"
-	parent = "architecture"
-	url    = "/architecture/route/"
-	weight = 240
-
-[[menu.main]]
-	name   = "Cluster概述"
-	identifier = "architecture-cluster"
-	parent = "architecture"
-	url    = "/architecture/cluster/"
-	weight = 250
-
-[[menu.main]]
-	name   = "Endpoint概述"
-	identifier = "architecture-endpoint"
-	parent = "architecture"
-	url    = "/architecture/endpoint/"
-	weight = 260
-
-[[menu.main]]
 	name   = "XDS API"
 	identifier = "xds"
 	url    = "/xds/"
 	weight = 300
+
+[[menu.main]]
+	name   = "xDS概述"
+	identifier = "xds-overview"
+	parent = "xds"
+	url    = "/xds/overview/"
+	weight = 302
 
 [[menu.main]]
 	name   = "LDS"

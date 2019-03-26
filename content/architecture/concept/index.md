@@ -36,9 +36,23 @@ description : "介绍Envoy的概念与术语"
 
 ![](images/forward-concept.png)
 
+
+
+### 数据平面与控制平面
+
+Envoy 将自身定义为数据平面，并希望使用者可以通过控制平面来为Envoy提供动态配置。
+
+控制平面的意义在于：
+
+> One of the biggest advantages of creating a distinct, centralized control plane is that it provides a source of truth for routing configuration. In legacy systems, this is stored in a mix of web server configuration files, load balancer configs, and application-specific routing definitions (e.g. `routes.rb`). Centralizing these definitions makes them safe and easy to change. This provides teams with flexibility during migrations, releases, and other major system changes.
+>
+> 创建独特的集中式控制平面的最大优势之一是它为路由配置提供了真实的来源（a source of truth）。 在遗留系统中，它以混合方式分别存储于Web服务器配置文件，负载均衡器配置和特定于应用程序的路由定义（例如routes.rb）。将这些定义集中起来，可以更安全并容易修改。 这为团队在进行迁移，发布和其他主要系统更改期间提供了灵活性。
+
+
+
 ### xDS API概念
 
-
+xds API 是 Envoy 定义的，用于控制平面和数据平面之间数据交互的通讯协议。
 
 | Concept | 全称                          | 描述              |
 | ------- | ----------------------------- | ----------------- |
@@ -62,7 +76,7 @@ description : "介绍Envoy的概念与术语"
 | ----------------- | ------------------------------------------------------------ |
 | Management Server | 实现v2 Envoy API的逻辑服务器。<br/>这不一定是单个物理机器，因为它可以被复制/分片，<br/>并且用于不同xDS API的API服务可以在不同的物理机器上实现。 |
 
-aDS API 示意图如下：
+xDS API 示意图如下：
 
 ![](images/xds.png)
 

@@ -3,8 +3,8 @@ date: 2018-11-07T15:30:00+08:00
 title: xDS REST和gRPC协议
 menu:
   main:
-    parent: "xds"
-weight: 301
+    parent: "xds-overview"
+weight: 303
 description : "xDS REST和gRPC协议"
 ---
 
@@ -187,7 +187,7 @@ xDS增量会话始终位于gRPC双向流的上下文中。 这允许xDS服务器
 在增量 xDS 中，nonce 字段是必须的，用于将 IncrementalDiscoveryResponse 匹配到 IncrementalDiscoveryRequest ACK 或者 NACK。可选的，应答消息级别的 system_version_info 仅用于调试目的。
 
 `IncrementalDiscoveryRequest`可以在以下 3 中情况下发送：
-  
+
 1. xDS 双向 gRPC 流中的初始化信息。
 
 2. 作为前一个`IncrementalDiscoveryResponse`的ACK或者NACK应答

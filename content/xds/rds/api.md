@@ -1,10 +1,10 @@
 ---
 date: 2018-11-02T10:00:00+08:00
-title: Route配置参考
-weight: 241
+title: Route API
+weight: 321
 menu:
   main:
-    parent: "architecture-route"
+    parent: "xds-rds"
 description : "Envoy的Route配置参考手册"
 ---
 

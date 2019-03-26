@@ -1,6 +1,7 @@
 ---
 date: 2018-11-07T14:50:00+08:00
-title: LDS API
+title: LDS
+weight: 310
 description : "介绍Envoy的XDS API中的LDS"
 ---
 
@@ -18,3 +19,24 @@ LDS是Listener Discovery Service的首字母缩写。
 - 当更新或删除监听器时，旧的监听器将被置于 “draining（逐出）” 状态，就像整个服务重新启动时一样。监听器移除之后，该监听器所拥有的连接，经过一段时间优雅地关闭（如果可能的话）剩余的连接。逐出时间通过 `--drain-time-s` 选项设置。
 
 > **注意**： 任何在 Envoy 配置中静态定义的监听器都不能通过 LDS API 进行修改或删除。
+
+## LDS定义
+
+https://github.com/envoyproxy/envoy/blob/master/api/envoy/api/v2/lds.proto
+
+
+
+```protobuf
+service ListenerDiscoveryService {
+  rpc StreamListeners(stream DiscoveryRequest) returns (stream DiscoveryResponse) {
+  }
+
+  rpc FetchListeners(DiscoveryRequest) returns (DiscoveryResponse) {
+    option (google.api.http) = {
+      post: "/v2/discovery:listeners"
+      body: "*"
+    };
+  }
+}
+```
+

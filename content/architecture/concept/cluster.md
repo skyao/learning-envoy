@@ -1,7 +1,10 @@
 ---
 date: 2018-11-07T15:30:00+08:00
-title: Cluster概述
-weight: 250
+title: Cluster
+weight: 214
+menu:
+  main:
+    parent: "architecture-concept"
 description : "概括介绍Envoy中的Cluster"
 ---
 
@@ -47,5 +50,5 @@ clusters:
 
 ### CDS动态配置
 
-TBD
+集群配置也可以通过 [集群发现服务 (RDS) ](../..//xds/cds/) 动态获取。
 

@@ -1,10 +1,10 @@
 ---
 date: 2018-11-02T10:00:00+08:00
-title: Endpoint配置参考
-weight: 261
+title: Endpoint API
+weight: 341
 menu:
   main:
-    parent: "architecture-endpoint"
+    parent: "xds-eds"
 description : "Envoy的Endpoint配置参考手册"
 ---
 

@@ -1,10 +1,10 @@
 ---
 date: 2018-11-02T10:00:00+08:00
-title: Cluster配置参考
-weight: 251
+title: Cluster API
+weight: 331
 menu:
   main:
-    parent: "architecture-cluster"
+    parent: "xds-cds"
 description : "Envoy的Cluster配置参考手册"
 ---
 
